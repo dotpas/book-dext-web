@@ -38,10 +38,10 @@ Este diretório contém os projetos de código Delphi e scripts de teste associa
 | **Lab. 04** | `lab-04-docker-microservice` | `Lab04_DockerMicroservice.dpr` | Microsserviço observável conteinerizado em Docker com OpenAPI. |
 | **Lab. 05** | `lab-05-enterprise-final` | `Lab05_EnterpriseFinal.dpr` | Aplicação enterprise multi-canal consolidada. |
 
-## Grupo de Projetos Delphi (`DextBookExamples.groupproj`)
+## Grupo de Projetos Delphi (`BookDextWebExamples.groupproj`)
 
 Todos os 29 projetos com seus respectivos `.dproj` estão registrados no arquivo unificado:
-➡️ **`DextBookExamples.groupproj`** (aberto diretamente no RAD Studio / Delphi IDE).
+➡️ **`BookDextWebExamples.groupproj`** (aberto diretamente no RAD Studio / Delphi IDE).
 
 ---
 

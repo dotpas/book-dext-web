@@ -2,7 +2,7 @@ param(
     [string]$ExamplesDir = "C:\dev\Dext\Docs\dext-developer-bookshelf\book\examples"
 )
 
-$GroupProjFile = Join-Path $ExamplesDir "DextBookExamples.groupproj"
+$GroupProjFile = Join-Path $ExamplesDir "BookDextWebExamples.groupproj"
 $DprojFiles = Get-ChildItem -Path $ExamplesDir -Recurse -Filter "*.dproj" | Sort-Object Name
 
 # Ensure unique dproj files by BaseName
@@ -68,4 +68,4 @@ $AllMakeTargets = ($SortedList | ForEach-Object { $_.BaseName + ':Make' }) -join
 [void]$Xml.AppendLine('</Project>')
 
 Set-Content -Path $GroupProjFile -Value $Xml.ToString() -Encoding UTF8
-Write-Host "[SUCESSO] DextBookExamples.groupproj atualizado com $($SortedList.Count) projetos!" -ForegroundColor Green
+Write-Host "[SUCESSO] BookDextWebExamples.groupproj atualizado com $($SortedList.Count) projetos!" -ForegroundColor Green
