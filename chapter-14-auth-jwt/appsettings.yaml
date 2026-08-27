@@ -1,0 +1,8 @@
+# =============================================================================
+# Configurações de Segurança - Capítulo 10
+# =============================================================================
+Security:
+  JwtSecret: "ChaveSecretaSuperSeguraParaDemonstracaoDext2026"
+  Issuer: "DextSecurityApp"
+  Audience: "DextAPI"
+  ExpirationMinutes: 60

@@ -1,0 +1,16 @@
+### Testes interativos de Segurança, Multi-Tenancy e CQRS (Laboratório 3)
+
+### 1. Consulta não autenticada (401)
+GET http://localhost:8080/api/v1/faturas
+
+### 2. Login Operador Tenant Alfa
+# @name loginOpAlfa
+POST http://localhost:8080/api/v1/auth/token?perfil=operador&tenant=tenant-alfa
+
+### 3. Consultar Faturas Tenant Alfa
+GET http://localhost:8080/api/v1/faturas
+Authorization: Bearer {{loginOpAlfa.response.body.token}}
+
+### 4. Tentar Cancelar Fatura de Alto Valor (403 Forbidden)
+DELETE http://localhost:8080/api/v1/faturas/105
+Authorization: Bearer {{loginOpAlfa.response.body.token}}

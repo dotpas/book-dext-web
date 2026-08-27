@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Dext Fullstack - SSR, HTMX e WebSockets Real-time</title>
+  <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; background: #0f172a; color: #f8fafc; margin: 0; padding: 2rem; }
+    .card { background: #1e293b; border-radius: 12px; padding: 1.5rem; max-width: 600px; margin: 0 auto 1.5rem auto; border: 1px solid #334155; }
+    h1 { color: #38bdf8; margin-top: 0; font-size: 1.5rem; }
+    .btn { background: #2563eb; color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.95rem; }
+    .btn:hover { background: #1d4ed8; }
+    .badge { display: inline-block; padding: 0.5rem 1rem; border-radius: 6px; background: #059669; color: white; font-weight: bold; margin-top: 1rem; }
+    #log { background: #020617; border-radius: 6px; padding: 1rem; height: 120px; overflow-y: auto; font-family: monospace; font-size: 0.85rem; border: 1px solid #1e293b; }
+    .log-item { color: #4ade80; margin-bottom: 0.3rem; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🚀 Dext Server-Driven UI com HTMX</h1>
+    <p>Clique no botão abaixo para disparar uma requisição HTMX ao servidor Dext e receber uma atualização parcial SSR de HTML:</p>
+    <button class="btn" hx-get="/htmx/update-invoice" hx-target="#ss-target" hx-swap="outerHTML">
+      Atualizar Fatura via HTMX
+    </button>
+    <div id="ss-target" style="margin-top: 1rem;">
+      <span style="color: #94a3b8;">Aguardando ação...</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h1>⚡ Real-time Bidirecional com Dext Hubs (WebSockets)</h1>
+    <p>Conexão com o <code>TNotificationsHub</code> em <code>ws://localhost:8080/hubs/notifications</code>:</p>
+    <button class="btn" onclick="triggerServerNotification()">Disparar Notificação Real-Time</button>
+    <h3 style="margin-top: 1rem; font-size: 1rem; color: #94a3b8;">Log de Eventos do WebSocket:</h3>
+    <div id="log">
+      <div class="log-item">[CLIENTE] Aguardando mensagens do servidor Dext...</div>
+    </div>
+  </div>
+
+  <script>
+    const logDiv = document.getElementById('log');
+    function log(msg) {
+      const item = document.createElement('div');
+      item.className = 'log-item';
+      item.textContent = `[${new Date().toLocaleTimeString()}] ${msg}`;
+      logDiv.appendChild(item);
+      logDiv.scrollTop = logDiv.scrollHeight;
+    }
+
+    // Conectar WebSocket ao Dext Hub
+    const wsProtocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+    const wsUrl = `${wsProtocol}//${window.location.host}/hubs/notifications`;
+    let socket;
+
+    try {
+      socket = new WebSocket(wsUrl);
+      socket.onopen = () => log('Conectado com sucesso ao Dext NotificationsHub via WebSocket!');
+      socket.onmessage = (event) => log(`Recebido do Servidor: ${event.data}`);
+      socket.onerror = (err) => log('Erro na conexão WebSocket.');
+      socket.onclose = () => log('Conexão WebSocket encerrada.');
+    } catch (e) {
+      log('WebSocket não suportado ou servidor offline.');
+    }
+
+    function triggerServerNotification() {
+      fetch('/api/v1/trigger-notification', { method: 'POST' })
+        .then(r => r.json())
+        .then(data => log('Solicitação de notificação enviada ao servidor.'))
+        .catch(err => log('Erro ao solicitar notificação.'));
+    }
+  </script>
+</body>
+</html>

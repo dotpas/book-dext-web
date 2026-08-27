@@ -1,0 +1,11 @@
+### 1. Obter Especificação OpenAPI 3.0 em JSON
+GET http://localhost:8080/swagger/v1/swagger.json
+Accept: application/json
+
+### 2. Acessar a Interface Interativa Swagger UI
+GET http://localhost:8080/swagger
+Accept: text/html
+
+### 3. Consultar Faturas Documentadas
+GET http://localhost:8080/api/v1/invoices
+Accept: application/json

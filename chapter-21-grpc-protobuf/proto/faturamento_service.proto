@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package dext.faturamento.v1;
+
+message CalculateInvoiceRequest {
+  int64 customer_id = 1;
+  string currency = 2;
+  repeated InvoiceItemDto items = 3;
+}
+
+message InvoiceItemDto {
+  string product_id = 1;
+  int32 quantity = 2;
+  double unit_price = 3;
+}
+
+message InvoiceResponse {
+  string invoice_id = 1;
+  int64 customer_id = 2;
+  double subtotal = 3;
+  double discount = 4;
+  double total_amount = 5;
+}
+
+service FaturamentoService {
+  rpc CalculateInvoice (CalculateInvoiceRequest) returns (InvoiceResponse);
+}

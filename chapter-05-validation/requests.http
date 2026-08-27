@@ -1,0 +1,27 @@
+### 1. Cadastro Válido (201 Created)
+POST http://localhost:8080/api/v1/clientes
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Tech Solutions LTDA",
+  "email": "contato@tech.com",
+  "age": 30,
+  "documentType": "PJ",
+  "documentNumber": "12345678000199",
+  "discountPercent": 15.0
+}
+
+### 2. Cadastro com Violação de Atributos e Regras Fluentes (400 Bad Request / Problem Details)
+POST http://localhost:8080/api/v1/clientes
+Content-Type: application/json
+Accept: application/problem+json
+
+{
+  "name": "Jo",
+  "email": "email_invalido",
+  "age": 19,
+  "documentType": "PJ",
+  "documentNumber": "12345678",
+  "discountPercent": 15.0
+}

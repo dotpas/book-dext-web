@@ -1,0 +1,15 @@
+# =============================================================================
+# Configurações de Hospedagem & Observabilidade - Capítulo 15
+# =============================================================================
+Server:
+  Port: 8080
+  Engine: "auto"
+
+Observability:
+  EnableMetrics: true
+  EnableTracing: true
+  LogLevel: "Information"
+
+HealthChecks:
+  LivenessEndpoint: "/health/live"
+  ReadinessEndpoint: "/health/ready"

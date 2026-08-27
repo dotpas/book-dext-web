@@ -1,0 +1,39 @@
+### 1. Cadastrar Cliente com Sucesso (201 Created)
+POST http://localhost:8080/api/v1/clientes
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Tech Solutions LTDA",
+  "email": "contato@tech.com",
+  "documentNumber": "12345678000199",
+  "creditLimit": 5000.00
+}
+
+### 2. Cadastrar Cliente com Falha de Validação (400 Bad Request / Problem Details)
+POST http://localhost:8080/api/v1/clientes
+Content-Type: application/json
+Accept: application/problem+json
+
+{
+  "name": "Jo",
+  "email": "invalido",
+  "documentNumber": "123",
+  "creditLimit": -100.00
+}
+
+### 3. Consultar Cliente por ID (200 OK)
+GET http://localhost:8080/api/v1/clientes/42
+Accept: application/json
+
+### 4. Consultar Cliente Inexistente (404 Not Found)
+GET http://localhost:8080/api/v1/clientes/999
+Accept: application/json
+
+### 5. Consulta Multi-Fonte com X-Tenant-ID (200 OK)
+GET http://localhost:8080/api/v1/clientes?status=ATIVO&limite=10
+X-Tenant-ID: tenant_filial_sp
+Accept: application/json
+
+### 6. Inativação de Cliente (204 No Content)
+DELETE http://localhost:8080/api/v1/clientes/42

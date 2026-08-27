@@ -1,0 +1,16 @@
+# Configurações do Dext Faturamento - Capítulo 06
+Server:
+  Port: 8080
+  Environment: Development
+
+Faturamento:
+  GatewayProvider: MockStripeGateway
+  MaxDiscountPercent: 15.0
+  DefaultCurrency: BRL
+
+FeatureManagement:
+  EnablePixInstantPayment: true
+  EnableAutomaticDunning: false
+
+Logging:
+  MinimumLevel: "Information"

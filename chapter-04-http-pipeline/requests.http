@@ -1,0 +1,23 @@
+### 1. Requisição GET com Injeção de Timing e Headers de Segurança
+GET http://localhost:8080/api/v1/faturas/resumo
+Accept: application/json
+
+### 2. Requisição Preflight CORS (OPTIONS) Autorizada
+OPTIONS http://localhost:8080/api/v1/faturas/resumo
+Origin: https://app.empresa.com
+Access-Control-Request-Method: GET
+Access-Control-Request-Headers: Content-Type, Authorization
+
+### 3. Requisição Preflight CORS (OPTIONS) Rejeitada por Origem Não Autorizada
+OPTIONS http://localhost:8080/api/v1/faturas/resumo
+Origin: https://site-malicioso.com
+Access-Control-Request-Method: GET
+
+### 4. Requisição com Teste de Problem Details (RFC 9457)
+GET http://localhost:8080/api/v1/error-demo
+Accept: application/problem+json
+
+### 5. Requisição Autenticada com Redaction de Log
+GET http://localhost:8080/api/v1/faturas/resumo
+Authorization: Bearer secret-jwt-token-12345
+Cookie: sessionId=abc123xyz

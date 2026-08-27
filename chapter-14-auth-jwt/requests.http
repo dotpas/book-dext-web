@@ -1,0 +1,26 @@
+### 1. Testar acesso sem token (Espera HTTP 401 Unauthorized)
+GET http://localhost:8080/api/v1/protected/user
+Accept: application/json
+
+### 2. Login como Usuario Comum (Operador)
+POST http://localhost:8080/api/v1/auth/login?user=operador
+Content-Type: application/json
+
+### 3. Login como Administrador (Admin)
+POST http://localhost:8080/api/v1/auth/login?user=admin
+Content-Type: application/json
+
+### 4. Acesso a Rota Protegida de Usuario (Substituir SEU_TOKEN_AQUI pelo token do login)
+GET http://localhost:8080/api/v1/protected/user
+Authorization: Bearer SEU_TOKEN_AQUI
+Accept: application/json
+
+### 5. Acesso Negado a Rota Admin com Token de Usuario Comum (Espera HTTP 403 Forbidden)
+GET http://localhost:8080/api/v1/protected/admin
+Authorization: Bearer SEU_TOKEN_OPERADOR_AQUI
+Accept: application/json
+
+### 6. Acesso Permitido a Rota Admin com Token de Administrador (Espera HTTP 200 OK)
+GET http://localhost:8080/api/v1/protected/admin
+Authorization: Bearer SEU_TOKEN_ADMIN_AQUI
+Accept: application/json

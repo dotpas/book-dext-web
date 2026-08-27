@@ -1,0 +1,41 @@
+### 1. Inicializar Protocolo MCP
+POST http://localhost:8080/mcp
+Content-Type: application/json
+
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "initialize",
+  "params": {
+    "protocolVersion": "2024-11-05",
+    "capabilities": {},
+    "clientInfo": {
+      "name": "AntigravityTestClient",
+      "version": "1.0.0"
+    }
+  }
+}
+
+### 2. Listar Ferramentas Disponíveis (tools/list)
+POST http://localhost:8080/mcp
+Content-Type: application/json
+
+{
+  "jsonrpc": "2.0",
+  "id": 2,
+  "method": "tools/list"
+}
+
+### 3. Invocação da Ferramenta get-server-status (tools/call)
+POST http://localhost:8080/mcp
+Content-Type: application/json
+
+{
+  "jsonrpc": "2.0",
+  "id": 3,
+  "method": "tools/call",
+  "params": {
+    "name": "get-server-status",
+    "arguments": {}
+  }
+}

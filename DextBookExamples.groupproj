@@ -1,0 +1,372 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{FD3D28FA-2596-4018-96CF-355200A95C1D}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="chapter-01-first-api\Chapter01_FirstAPI.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="chapter-02-minimal-apis\Chapter02_InvoicesMinimalAPI.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="chapter-03-model-binding\Chapter03_ModelBindingApp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="chapter-04-http-pipeline\Chapter04_MiddlewareApp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="chapter-05-validation\Chapter05_ValidationApp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="chapter-06-configuration\Chapter06_ConfigApp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="chapter-07-controllers\Chapter07_ControllerApp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="chapter-08-orm-basics\Chapter08_OrmBasicsApp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="chapter-09-smart-properties\Chapter09_SmartPropertiesApp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="chapter-10-specifications\Chapter10_SpecificationsApp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="chapter-11-domain-cqrs\Chapter11_DomainCqrsApp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="chapter-12-multi-tenancy\Chapter12_MultiTenancyApp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="chapter-13-database-as-api\Chapter13_DataApiApp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="chapter-14-auth-jwt\Chapter14_SecurityJwtApp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="chapter-15-authorization\Chapter15_AuthorizationApp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="chapter-16-cache-resilience\Chapter16_CacheCapacityApp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="chapter-17-resilience\Chapter17_ResilienceApp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="chapter-18-observability\Chapter18_ObservabilityApp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="chapter-19-openapi-swagger\Chapter19_SwaggerApp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="chapter-20-frontend-ssr-htmx\Chapter20_RealtimeApp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="chapter-21-grpc-protobuf\Chapter21_GrpcApp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="chapter-22-automated-testing\Chapter22_TestRunnerApp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="chapter-23-docker-runtime\Chapter23_DockerRuntimeApp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="chapter-24-ai-native-mcp\Chapter24_McpServerApp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="lab-01-customers-api\Lab01_CustomersApi.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="lab-02-persistence-faturamento\Lab02_PersistenceFaturamento.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="lab-03-secure-multitenant\Lab03_SecureMultiTenant.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="lab-04-docker-microservice\Lab04_DockerMicroservice.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="lab-05-enterprise-final\Lab05_EnterpriseFinal.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Chapter01_FirstAPI">
+        <MSBuild Projects="chapter-01-first-api\Chapter01_FirstAPI.dproj"/>
+    </Target>
+    <Target Name="Chapter01_FirstAPI:Clean">
+        <MSBuild Projects="chapter-01-first-api\Chapter01_FirstAPI.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Chapter01_FirstAPI:Make">
+        <MSBuild Projects="chapter-01-first-api\Chapter01_FirstAPI.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Chapter02_InvoicesMinimalAPI">
+        <MSBuild Projects="chapter-02-minimal-apis\Chapter02_InvoicesMinimalAPI.dproj"/>
+    </Target>
+    <Target Name="Chapter02_InvoicesMinimalAPI:Clean">
+        <MSBuild Projects="chapter-02-minimal-apis\Chapter02_InvoicesMinimalAPI.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Chapter02_InvoicesMinimalAPI:Make">
+        <MSBuild Projects="chapter-02-minimal-apis\Chapter02_InvoicesMinimalAPI.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Chapter03_ModelBindingApp">
+        <MSBuild Projects="chapter-03-model-binding\Chapter03_ModelBindingApp.dproj"/>
+    </Target>
+    <Target Name="Chapter03_ModelBindingApp:Clean">
+        <MSBuild Projects="chapter-03-model-binding\Chapter03_ModelBindingApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Chapter03_ModelBindingApp:Make">
+        <MSBuild Projects="chapter-03-model-binding\Chapter03_ModelBindingApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Chapter04_MiddlewareApp">
+        <MSBuild Projects="chapter-04-http-pipeline\Chapter04_MiddlewareApp.dproj"/>
+    </Target>
+    <Target Name="Chapter04_MiddlewareApp:Clean">
+        <MSBuild Projects="chapter-04-http-pipeline\Chapter04_MiddlewareApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Chapter04_MiddlewareApp:Make">
+        <MSBuild Projects="chapter-04-http-pipeline\Chapter04_MiddlewareApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Chapter05_ValidationApp">
+        <MSBuild Projects="chapter-05-validation\Chapter05_ValidationApp.dproj"/>
+    </Target>
+    <Target Name="Chapter05_ValidationApp:Clean">
+        <MSBuild Projects="chapter-05-validation\Chapter05_ValidationApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Chapter05_ValidationApp:Make">
+        <MSBuild Projects="chapter-05-validation\Chapter05_ValidationApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Chapter06_ConfigApp">
+        <MSBuild Projects="chapter-06-configuration\Chapter06_ConfigApp.dproj"/>
+    </Target>
+    <Target Name="Chapter06_ConfigApp:Clean">
+        <MSBuild Projects="chapter-06-configuration\Chapter06_ConfigApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Chapter06_ConfigApp:Make">
+        <MSBuild Projects="chapter-06-configuration\Chapter06_ConfigApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Chapter07_ControllerApp">
+        <MSBuild Projects="chapter-07-controllers\Chapter07_ControllerApp.dproj"/>
+    </Target>
+    <Target Name="Chapter07_ControllerApp:Clean">
+        <MSBuild Projects="chapter-07-controllers\Chapter07_ControllerApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Chapter07_ControllerApp:Make">
+        <MSBuild Projects="chapter-07-controllers\Chapter07_ControllerApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Chapter08_OrmBasicsApp">
+        <MSBuild Projects="chapter-08-orm-basics\Chapter08_OrmBasicsApp.dproj"/>
+    </Target>
+    <Target Name="Chapter08_OrmBasicsApp:Clean">
+        <MSBuild Projects="chapter-08-orm-basics\Chapter08_OrmBasicsApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Chapter08_OrmBasicsApp:Make">
+        <MSBuild Projects="chapter-08-orm-basics\Chapter08_OrmBasicsApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Chapter09_SmartPropertiesApp">
+        <MSBuild Projects="chapter-09-smart-properties\Chapter09_SmartPropertiesApp.dproj"/>
+    </Target>
+    <Target Name="Chapter09_SmartPropertiesApp:Clean">
+        <MSBuild Projects="chapter-09-smart-properties\Chapter09_SmartPropertiesApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Chapter09_SmartPropertiesApp:Make">
+        <MSBuild Projects="chapter-09-smart-properties\Chapter09_SmartPropertiesApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Chapter10_SpecificationsApp">
+        <MSBuild Projects="chapter-10-specifications\Chapter10_SpecificationsApp.dproj"/>
+    </Target>
+    <Target Name="Chapter10_SpecificationsApp:Clean">
+        <MSBuild Projects="chapter-10-specifications\Chapter10_SpecificationsApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Chapter10_SpecificationsApp:Make">
+        <MSBuild Projects="chapter-10-specifications\Chapter10_SpecificationsApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Chapter11_DomainCqrsApp">
+        <MSBuild Projects="chapter-11-domain-cqrs\Chapter11_DomainCqrsApp.dproj"/>
+    </Target>
+    <Target Name="Chapter11_DomainCqrsApp:Clean">
+        <MSBuild Projects="chapter-11-domain-cqrs\Chapter11_DomainCqrsApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Chapter11_DomainCqrsApp:Make">
+        <MSBuild Projects="chapter-11-domain-cqrs\Chapter11_DomainCqrsApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Chapter12_MultiTenancyApp">
+        <MSBuild Projects="chapter-12-multi-tenancy\Chapter12_MultiTenancyApp.dproj"/>
+    </Target>
+    <Target Name="Chapter12_MultiTenancyApp:Clean">
+        <MSBuild Projects="chapter-12-multi-tenancy\Chapter12_MultiTenancyApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Chapter12_MultiTenancyApp:Make">
+        <MSBuild Projects="chapter-12-multi-tenancy\Chapter12_MultiTenancyApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Chapter13_DataApiApp">
+        <MSBuild Projects="chapter-13-database-as-api\Chapter13_DataApiApp.dproj"/>
+    </Target>
+    <Target Name="Chapter13_DataApiApp:Clean">
+        <MSBuild Projects="chapter-13-database-as-api\Chapter13_DataApiApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Chapter13_DataApiApp:Make">
+        <MSBuild Projects="chapter-13-database-as-api\Chapter13_DataApiApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Chapter14_SecurityJwtApp">
+        <MSBuild Projects="chapter-14-auth-jwt\Chapter14_SecurityJwtApp.dproj"/>
+    </Target>
+    <Target Name="Chapter14_SecurityJwtApp:Clean">
+        <MSBuild Projects="chapter-14-auth-jwt\Chapter14_SecurityJwtApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Chapter14_SecurityJwtApp:Make">
+        <MSBuild Projects="chapter-14-auth-jwt\Chapter14_SecurityJwtApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Chapter15_AuthorizationApp">
+        <MSBuild Projects="chapter-15-authorization\Chapter15_AuthorizationApp.dproj"/>
+    </Target>
+    <Target Name="Chapter15_AuthorizationApp:Clean">
+        <MSBuild Projects="chapter-15-authorization\Chapter15_AuthorizationApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Chapter15_AuthorizationApp:Make">
+        <MSBuild Projects="chapter-15-authorization\Chapter15_AuthorizationApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Chapter16_CacheCapacityApp">
+        <MSBuild Projects="chapter-16-cache-resilience\Chapter16_CacheCapacityApp.dproj"/>
+    </Target>
+    <Target Name="Chapter16_CacheCapacityApp:Clean">
+        <MSBuild Projects="chapter-16-cache-resilience\Chapter16_CacheCapacityApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Chapter16_CacheCapacityApp:Make">
+        <MSBuild Projects="chapter-16-cache-resilience\Chapter16_CacheCapacityApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Chapter17_ResilienceApp">
+        <MSBuild Projects="chapter-17-resilience\Chapter17_ResilienceApp.dproj"/>
+    </Target>
+    <Target Name="Chapter17_ResilienceApp:Clean">
+        <MSBuild Projects="chapter-17-resilience\Chapter17_ResilienceApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Chapter17_ResilienceApp:Make">
+        <MSBuild Projects="chapter-17-resilience\Chapter17_ResilienceApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Chapter18_ObservabilityApp">
+        <MSBuild Projects="chapter-18-observability\Chapter18_ObservabilityApp.dproj"/>
+    </Target>
+    <Target Name="Chapter18_ObservabilityApp:Clean">
+        <MSBuild Projects="chapter-18-observability\Chapter18_ObservabilityApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Chapter18_ObservabilityApp:Make">
+        <MSBuild Projects="chapter-18-observability\Chapter18_ObservabilityApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Chapter19_SwaggerApp">
+        <MSBuild Projects="chapter-19-openapi-swagger\Chapter19_SwaggerApp.dproj"/>
+    </Target>
+    <Target Name="Chapter19_SwaggerApp:Clean">
+        <MSBuild Projects="chapter-19-openapi-swagger\Chapter19_SwaggerApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Chapter19_SwaggerApp:Make">
+        <MSBuild Projects="chapter-19-openapi-swagger\Chapter19_SwaggerApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Chapter20_RealtimeApp">
+        <MSBuild Projects="chapter-20-frontend-ssr-htmx\Chapter20_RealtimeApp.dproj"/>
+    </Target>
+    <Target Name="Chapter20_RealtimeApp:Clean">
+        <MSBuild Projects="chapter-20-frontend-ssr-htmx\Chapter20_RealtimeApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Chapter20_RealtimeApp:Make">
+        <MSBuild Projects="chapter-20-frontend-ssr-htmx\Chapter20_RealtimeApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Chapter21_GrpcApp">
+        <MSBuild Projects="chapter-21-grpc-protobuf\Chapter21_GrpcApp.dproj"/>
+    </Target>
+    <Target Name="Chapter21_GrpcApp:Clean">
+        <MSBuild Projects="chapter-21-grpc-protobuf\Chapter21_GrpcApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Chapter21_GrpcApp:Make">
+        <MSBuild Projects="chapter-21-grpc-protobuf\Chapter21_GrpcApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Chapter22_TestRunnerApp">
+        <MSBuild Projects="chapter-22-automated-testing\Chapter22_TestRunnerApp.dproj"/>
+    </Target>
+    <Target Name="Chapter22_TestRunnerApp:Clean">
+        <MSBuild Projects="chapter-22-automated-testing\Chapter22_TestRunnerApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Chapter22_TestRunnerApp:Make">
+        <MSBuild Projects="chapter-22-automated-testing\Chapter22_TestRunnerApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Chapter23_DockerRuntimeApp">
+        <MSBuild Projects="chapter-23-docker-runtime\Chapter23_DockerRuntimeApp.dproj"/>
+    </Target>
+    <Target Name="Chapter23_DockerRuntimeApp:Clean">
+        <MSBuild Projects="chapter-23-docker-runtime\Chapter23_DockerRuntimeApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Chapter23_DockerRuntimeApp:Make">
+        <MSBuild Projects="chapter-23-docker-runtime\Chapter23_DockerRuntimeApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Chapter24_McpServerApp">
+        <MSBuild Projects="chapter-24-ai-native-mcp\Chapter24_McpServerApp.dproj"/>
+    </Target>
+    <Target Name="Chapter24_McpServerApp:Clean">
+        <MSBuild Projects="chapter-24-ai-native-mcp\Chapter24_McpServerApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Chapter24_McpServerApp:Make">
+        <MSBuild Projects="chapter-24-ai-native-mcp\Chapter24_McpServerApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Lab01_CustomersApi">
+        <MSBuild Projects="lab-01-customers-api\Lab01_CustomersApi.dproj"/>
+    </Target>
+    <Target Name="Lab01_CustomersApi:Clean">
+        <MSBuild Projects="lab-01-customers-api\Lab01_CustomersApi.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Lab01_CustomersApi:Make">
+        <MSBuild Projects="lab-01-customers-api\Lab01_CustomersApi.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Lab02_PersistenceFaturamento">
+        <MSBuild Projects="lab-02-persistence-faturamento\Lab02_PersistenceFaturamento.dproj"/>
+    </Target>
+    <Target Name="Lab02_PersistenceFaturamento:Clean">
+        <MSBuild Projects="lab-02-persistence-faturamento\Lab02_PersistenceFaturamento.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Lab02_PersistenceFaturamento:Make">
+        <MSBuild Projects="lab-02-persistence-faturamento\Lab02_PersistenceFaturamento.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Lab03_SecureMultiTenant">
+        <MSBuild Projects="lab-03-secure-multitenant\Lab03_SecureMultiTenant.dproj"/>
+    </Target>
+    <Target Name="Lab03_SecureMultiTenant:Clean">
+        <MSBuild Projects="lab-03-secure-multitenant\Lab03_SecureMultiTenant.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Lab03_SecureMultiTenant:Make">
+        <MSBuild Projects="lab-03-secure-multitenant\Lab03_SecureMultiTenant.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Lab04_DockerMicroservice">
+        <MSBuild Projects="lab-04-docker-microservice\Lab04_DockerMicroservice.dproj"/>
+    </Target>
+    <Target Name="Lab04_DockerMicroservice:Clean">
+        <MSBuild Projects="lab-04-docker-microservice\Lab04_DockerMicroservice.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Lab04_DockerMicroservice:Make">
+        <MSBuild Projects="lab-04-docker-microservice\Lab04_DockerMicroservice.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Lab05_EnterpriseFinal">
+        <MSBuild Projects="lab-05-enterprise-final\Lab05_EnterpriseFinal.dproj"/>
+    </Target>
+    <Target Name="Lab05_EnterpriseFinal:Clean">
+        <MSBuild Projects="lab-05-enterprise-final\Lab05_EnterpriseFinal.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Lab05_EnterpriseFinal:Make">
+        <MSBuild Projects="lab-05-enterprise-final\Lab05_EnterpriseFinal.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Chapter01_FirstAPI;Chapter02_InvoicesMinimalAPI;Chapter03_ModelBindingApp;Chapter04_MiddlewareApp;Chapter05_ValidationApp;Chapter06_ConfigApp;Chapter07_ControllerApp;Chapter08_OrmBasicsApp;Chapter09_SmartPropertiesApp;Chapter10_SpecificationsApp;Chapter11_DomainCqrsApp;Chapter12_MultiTenancyApp;Chapter13_DataApiApp;Chapter14_SecurityJwtApp;Chapter15_AuthorizationApp;Chapter16_CacheCapacityApp;Chapter17_ResilienceApp;Chapter18_ObservabilityApp;Chapter19_SwaggerApp;Chapter20_RealtimeApp;Chapter21_GrpcApp;Chapter22_TestRunnerApp;Chapter23_DockerRuntimeApp;Chapter24_McpServerApp;Lab01_CustomersApi;Lab02_PersistenceFaturamento;Lab03_SecureMultiTenant;Lab04_DockerMicroservice;Lab05_EnterpriseFinal"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Chapter01_FirstAPI:Clean;Chapter02_InvoicesMinimalAPI:Clean;Chapter03_ModelBindingApp:Clean;Chapter04_MiddlewareApp:Clean;Chapter05_ValidationApp:Clean;Chapter06_ConfigApp:Clean;Chapter07_ControllerApp:Clean;Chapter08_OrmBasicsApp:Clean;Chapter09_SmartPropertiesApp:Clean;Chapter10_SpecificationsApp:Clean;Chapter11_DomainCqrsApp:Clean;Chapter12_MultiTenancyApp:Clean;Chapter13_DataApiApp:Clean;Chapter14_SecurityJwtApp:Clean;Chapter15_AuthorizationApp:Clean;Chapter16_CacheCapacityApp:Clean;Chapter17_ResilienceApp:Clean;Chapter18_ObservabilityApp:Clean;Chapter19_SwaggerApp:Clean;Chapter20_RealtimeApp:Clean;Chapter21_GrpcApp:Clean;Chapter22_TestRunnerApp:Clean;Chapter23_DockerRuntimeApp:Clean;Chapter24_McpServerApp:Clean;Lab01_CustomersApi:Clean;Lab02_PersistenceFaturamento:Clean;Lab03_SecureMultiTenant:Clean;Lab04_DockerMicroservice:Clean;Lab05_EnterpriseFinal:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Chapter01_FirstAPI:Make;Chapter02_InvoicesMinimalAPI:Make;Chapter03_ModelBindingApp:Make;Chapter04_MiddlewareApp:Make;Chapter05_ValidationApp:Make;Chapter06_ConfigApp:Make;Chapter07_ControllerApp:Make;Chapter08_OrmBasicsApp:Make;Chapter09_SmartPropertiesApp:Make;Chapter10_SpecificationsApp:Make;Chapter11_DomainCqrsApp:Make;Chapter12_MultiTenancyApp:Make;Chapter13_DataApiApp:Make;Chapter14_SecurityJwtApp:Make;Chapter15_AuthorizationApp:Make;Chapter16_CacheCapacityApp:Make;Chapter17_ResilienceApp:Make;Chapter18_ObservabilityApp:Make;Chapter19_SwaggerApp:Make;Chapter20_RealtimeApp:Make;Chapter21_GrpcApp:Make;Chapter22_TestRunnerApp:Make;Chapter23_DockerRuntimeApp:Make;Chapter24_McpServerApp:Make;Lab01_CustomersApi:Make;Lab02_PersistenceFaturamento:Make;Lab03_SecureMultiTenant:Make;Lab04_DockerMicroservice:Make;Lab05_EnterpriseFinal:Make"/>
+    </Target>
+</Project>
+

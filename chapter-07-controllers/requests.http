@@ -1,0 +1,11 @@
+### 1. Listar Faturas do Cliente
+GET http://localhost:8080/api/v1/faturas?clienteId=42
+Accept: application/json
+
+### 2. Obter Fatura por ID
+GET http://localhost:8080/api/v1/faturas/105
+Accept: application/json
+
+### 3. Cancelar Fatura
+DELETE http://localhost:8080/api/v1/faturas/105
+Accept: application/json

@@ -1,0 +1,13 @@
+### Testes interativos de Observabilidade e Métricas (Laboratório 4)
+
+### 1. Liveness Probe
+GET http://localhost:8080/healthz/live
+
+### 2. Readiness Probe
+GET http://localhost:8080/healthz/ready
+
+### 3. Métricas Prometheus
+GET http://localhost:8080/metrics
+
+### 4. Consultar Faturas
+GET http://localhost:8080/api/v1/faturas
